@@ -11,20 +11,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        
-        // create factory of shared module - it's main DI component of application.
-        // Provide ViewModels of all features.
-        // Input is platform-specific:
-        // * settings - settings platform storage for https://github.com/russhwolf/multiplatform-settings
-        // * antilog - platform logger with println for https://github.com/AAkira/Napier
-        // * baseUrl - server url from platform build configs (allows use schemes for server configs)
-        // * newsUnitsFactory - platform factory of UITableView items for https://github.com/icerockdev/moko-units
-        AppComponent.factory = SharedFactory(
-            settings: AppleSettings(delegate: UserDefaults.standard),
-            antilog: DebugAntilog(defaultTag: "MPP"),
-            baseUrl: "https://newsapi.org/v2/",
-            newsUnitsFactory: NewsListUnitsFactory()
-        )
+        let app = App()
+        app.setup()
+
+        let screen = app.createRootScreen()
+        let rootViewController = screen.createViewController()
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
+
         return true
     }
 }
