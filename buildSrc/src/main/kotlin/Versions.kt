@@ -12,9 +12,9 @@ object Versions {
     const val kotlin = "1.3.60"
 
     private const val mokoResources = "0.6.0-dev-1"
-    private const val mokoNetwork = "0.2.0-dev-1"
+    private const val mokoNetwork = "0.2.0-dev-2"
     private const val mokoUnits = "0.2.0-dev-2"
-    private const val mokoWidgets = "0.1.0-dev-2"
+    private const val mokoWidgets = "0.1.0-dev-3"
 
     object Plugins {
         const val kotlin = Versions.kotlin
@@ -56,7 +56,7 @@ object Versions {
             const val mokoUnits = Versions.mokoUnits
             const val mokoWidgets = Versions.mokoWidgets
 
-            const val napier = "1.0.0" // NOT UPDATED YET!
+            const val napier = "1.1.0"
             const val settings = "0.4.1"
         }
     }
