@@ -4,28 +4,27 @@
 
 package org.example.mpp
 
+import dev.icerock.moko.resources.desc.StringDesc
 import dev.icerock.moko.resources.desc.desc
 import dev.icerock.moko.widgets.container
-import dev.icerock.moko.widgets.core.Widget
-import dev.icerock.moko.widgets.core.WidgetScope
+import dev.icerock.moko.widgets.core.Theme
 import dev.icerock.moko.widgets.screen.Args
 import dev.icerock.moko.widgets.screen.WidgetScreen
-import dev.icerock.moko.widgets.style.view.Alignment
+import dev.icerock.moko.widgets.style.view.WidgetSize
 import dev.icerock.moko.widgets.text
 import org.example.library.MR
 
 class MainScreen(
-    private val widgetScope: WidgetScope
+    private val theme: Theme
 ) : WidgetScreen<Args.Empty>() {
-    override fun createContentWidget(): Widget {
-        return with(widgetScope) {
-            container(
-                children = mapOf(
-                    text(
-                        text = const(MR.strings.hello_world.desc())
-                    ) to Alignment.CENTER
+    override fun createContentWidget() = with(theme) {
+        container(size = WidgetSize.AsParent) {
+            center {
+                text(
+                    size = WidgetSize.WrapContent,
+                    text = const(MR.strings.hello_world.desc() as StringDesc)
                 )
-            )
+            }
         }
     }
 }

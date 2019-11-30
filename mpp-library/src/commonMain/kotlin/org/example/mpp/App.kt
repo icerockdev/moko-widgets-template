@@ -4,7 +4,7 @@
 
 package org.example.mpp
 
-import dev.icerock.moko.widgets.core.WidgetScope
+import dev.icerock.moko.widgets.core.Theme
 import dev.icerock.moko.widgets.screen.Args
 import dev.icerock.moko.widgets.screen.BaseApplication
 import dev.icerock.moko.widgets.screen.Screen
@@ -12,9 +12,9 @@ import kotlin.reflect.KClass
 
 class App : BaseApplication() {
     override fun setup() {
-        val rootWidgetScope = WidgetScope()
+        val theme = Theme()
 
-        registerScreenFactory(MainScreen::class) { MainScreen(rootWidgetScope) }
+        registerScreenFactory(MainScreen::class) { MainScreen(theme) }
     }
 
     override fun getRootScreen(): KClass<out Screen<Args.Empty>> {
