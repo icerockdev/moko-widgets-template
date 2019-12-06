@@ -51,7 +51,7 @@ object Versions {
             const val mokoResources = Versions.mokoResources
             const val mokoNetwork = Versions.mokoNetwork
             const val mokoFields = "0.2.0-dev-1"
-            const val mokoPermissions = "0.2.0-dev-1"
+            const val mokoPermissions = "0.3.0-dev-2"
             const val mokoMedia = "0.2.0-dev-1"
             const val mokoUnits = Versions.mokoUnits
             const val mokoWidgets = Versions.mokoWidgets
