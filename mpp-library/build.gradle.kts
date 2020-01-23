@@ -19,21 +19,12 @@ android {
 }
 
 val mppLibs = listOf(
-    Deps.Libs.MultiPlatform.settings,
-    Deps.Libs.MultiPlatform.napier,
-    Deps.Libs.MultiPlatform.mokoParcelize,
     Deps.Libs.MultiPlatform.mokoResources,
-    Deps.Libs.MultiPlatform.mokoMvvm,
-    Deps.Libs.MultiPlatform.mokoUnits
-)
-val mppModules = listOf(
-    Modules.MultiPlatform.domain,
-    Modules.MultiPlatform.Feature.config,
-    Modules.MultiPlatform.Feature.list
+    Deps.Libs.MultiPlatform.mokoWidgets
 )
 
 setupFramework(
-    exports = mppLibs + mppModules
+    exports = mppLibs
 )
 
 dependencies {
@@ -43,7 +34,6 @@ dependencies {
     androidLibrary(Deps.Libs.Android.lifecycle)
 
     mppLibs.forEach { mppLibrary(it) }
-    mppModules.forEach { mppModule(it) }
 }
 
 multiplatformResources {

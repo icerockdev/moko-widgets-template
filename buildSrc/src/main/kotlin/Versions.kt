@@ -6,14 +6,15 @@ object Versions {
     object Android {
         const val compileSdk = 28
         const val targetSdk = 28
-        const val minSdk = 21
+        const val minSdk = 16
     }
 
     const val kotlin = "1.3.61"
 
-    private const val mokoResources = "0.6.0"
-    private const val mokoNetwork = "0.2.0"
-    private const val mokoUnits = "0.2.0-dev-2" // temporary dev version
+    private const val mokoResources = "0.6.2"
+    private const val mokoNetwork = "0.3.0"
+    private const val mokoUnits = "0.2.0-dev-3"
+    private const val mokoWidgets = "0.1.0-dev-6"
 
     object Plugins {
         const val kotlin = Versions.kotlin
@@ -22,6 +23,7 @@ object Versions {
         const val mokoResources = Versions.mokoResources
         const val mokoNetwork = Versions.mokoNetwork
         const val mokoUnits = Versions.mokoUnits
+        const val mokoWidgets = Versions.mokoWidgets
     }
 
     object Libs {
@@ -49,9 +51,10 @@ object Versions {
             const val mokoResources = Versions.mokoResources
             const val mokoNetwork = Versions.mokoNetwork
             const val mokoFields = "0.2.0"
-            const val mokoPermissions = "0.2.0"
+            const val mokoPermissions = "0.4.0"
             const val mokoMedia = "0.2.0"
             const val mokoUnits = Versions.mokoUnits
+            const val mokoWidgets = Versions.mokoWidgets
 
             const val napier = "1.1.0"
             const val settings = "0.5"

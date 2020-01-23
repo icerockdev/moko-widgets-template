@@ -22,6 +22,4 @@ end
 
 target 'ios-app' do
   pod 'MultiPlatformLibrary', :path => '../mpp-library'
-  pod 'MultiPlatformLibraryMvvm', :git => 'https://github.com/icerockdev/moko-mvvm.git', :tag => 'release/0.4.0'
-  pod 'MultiPlatformLibraryUnits/Core', :git => 'https://github.com/icerockdev/moko-units.git', :tag => 'release/0.2.0-dev-2'
 end

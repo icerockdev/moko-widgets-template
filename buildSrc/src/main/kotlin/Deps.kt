@@ -14,6 +14,8 @@ object Deps {
             "dev.icerock.moko:network-generator:${Versions.Plugins.mokoNetwork}"
         const val mokoUnits =
             "dev.icerock.moko:units-generator:${Versions.Plugins.mokoUnits}"
+        const val mokoWidgets =
+            "dev.icerock.moko.widgets:gradle-plugin:${Versions.Plugins.mokoWidgets}"
     }
 
     object Libs {
@@ -108,6 +110,11 @@ object Deps {
                 iosX64 = "dev.icerock.moko:units-iosx64:${Versions.Libs.MultiPlatform.mokoUnits}",
                 iosArm64 = "dev.icerock.moko:units-iosarm64:${Versions.Libs.MultiPlatform.mokoUnits}"
             )
+            val mokoWidgets = MultiPlatformLibrary(
+                common = "dev.icerock.moko:widgets:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosX64 = "dev.icerock.moko:widgets-iosx64:${Versions.Libs.MultiPlatform.mokoWidgets}",
+                iosArm64 = "dev.icerock.moko:widgets-iosarm64:${Versions.Libs.MultiPlatform.mokoWidgets}"
+            )
             val mokoFields = MultiPlatformLibrary(
                 common = "dev.icerock.moko:fields:${Versions.Libs.MultiPlatform.mokoFields}",
                 iosX64 = "dev.icerock.moko:fields-iosx64:${Versions.Libs.MultiPlatform.mokoFields}",
@@ -132,6 +139,7 @@ object Deps {
         "kotlinx-serialization" to Plugins.kotlinSerialization,
         "dev.icerock.mobile.multiplatform-resources" to Plugins.mokoResources,
         "dev.icerock.mobile.multiplatform-network-generator" to Plugins.mokoNetwork,
-        "dev.icerock.mobile.multiplatform-units" to Plugins.mokoUnits
+        "dev.icerock.mobile.multiplatform-units" to Plugins.mokoUnits,
+        "dev.icerock.mobile.multiplatform-widgets-generator" to Plugins.mokoWidgets
     )
 }
