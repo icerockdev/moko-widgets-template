@@ -1,5 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+project 'ios-app',
+  'dev-release' => :release, 'prod-release' => :release,
+  'dev-debug' => :debug, 'prod-debug' => :debug
+
 # ignore all warnings from all pods
 inhibit_all_warnings!
 

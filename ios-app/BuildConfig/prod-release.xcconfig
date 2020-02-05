@@ -1,0 +1,5 @@
+#include "release.xcconfig"
+#include "../Pods/Target Support Files/Pods-ios-app/Pods-ios-app.prod-release.xcconfig"
+#include "prod.xcconfig"
+
+PROVISIONING_PROFILE_SPECIFIER = $(sigh_org.example.app_development) // REPLACE:org.example.app:APP_ID

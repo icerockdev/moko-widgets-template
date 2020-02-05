@@ -1,0 +1,2 @@
+PRODUCT_BUNDLE_IDENTIFIER = org.example.app // REPLACE:org.example.app:APP_ID
+SERVER_ENDPOINT = https:\/\/api.github.com

@@ -1,7 +1,3 @@
-/*
- * Copyright 2019 IceRock MAG Inc. Use of this source code is governed by the Apache 2.0 license.
- */
-
 import UIKit
 import MultiPlatformLibrary
 
@@ -12,14 +8,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         let app = App()
-        app.setup()
+        print("app \(app)")
+        let initial = app.setup()
+        print("initial \(initial)")
 
         let screen = app.rootScreen.instantiate()
+        print("screen \(screen)")
         let rootViewController = screen.viewController
+        print("rootViewController \(rootViewController)")
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
+        print("mkav")
         window?.makeKeyAndVisible()
+        print("return")
 
         return true
     }

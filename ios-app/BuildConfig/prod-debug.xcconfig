@@ -1,0 +1,6 @@
+#include "debug.xcconfig"
+#include "../Pods/Target Support Files/Pods-ios-app/Pods-ios-app.prod-debug.xcconfig"
+#include "prod.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = org.example.app.debug // REPLACE:org.example.app:APP_ID
+
