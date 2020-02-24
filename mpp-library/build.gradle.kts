@@ -40,5 +40,15 @@ multiplatformResources {
     multiplatformResourcesPackage = "org.example.library"
 }
 
-// dependencies graph generator
-apply(from = "https://raw.githubusercontent.com/JakeWharton/SdkSearch/master/gradle/projectDependencyGraph.gradle")
+// temporary fix of release builds
+kotlin {
+    targets
+        .filterIsInstance<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget>()
+        .forEach {
+            it.compilations.all {
+                kotlinOptions {
+                    freeCompilerArgs += "-Xdisable-phases=Devirtualization,DCEPhase"
+                }
+            }
+        }
+}
