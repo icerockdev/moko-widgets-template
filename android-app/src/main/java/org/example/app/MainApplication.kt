@@ -9,9 +9,7 @@ class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        mppApplication = App().apply {
-            setup()
-        }
+        mppApplication = App().apply { initialize() }
     }
 
     companion object {
