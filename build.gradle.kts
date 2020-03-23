@@ -15,11 +15,9 @@ allprojects {
         maven { url = uri("https://dl.bintray.com/aakira/maven") }
         maven { url = uri("http://dl.bintray.com/lukaville/maven") }
     }
-
-    // workaround for https://youtrack.jetbrains.com/issue/KT-27170
-    configurations.create("compileClasspath")
 }
 
 tasks.register("clean", Delete::class).configure {
+    group = "build"
     delete(rootProject.buildDir)
 }

@@ -9,7 +9,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         let app = App()
         app.initialize()
-        ApplicationHolderKt.application = app
         
         let screen = app.rootScreen.instantiate()
         let rootViewController = screen.viewController

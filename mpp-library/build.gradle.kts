@@ -39,16 +39,3 @@ dependencies {
 multiplatformResources {
     multiplatformResourcesPackage = "org.example.library"
 }
-
-// temporary fix of release builds
-kotlin {
-    targets
-        .filterIsInstance<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget>()
-        .forEach {
-            it.compilations.all {
-                kotlinOptions {
-                    freeCompilerArgs += "-Xdisable-phases=Devirtualization,DCEPhase"
-                }
-            }
-        }
-}
