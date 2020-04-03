@@ -8,14 +8,13 @@ A sample project that helps to start building a Mobile Kotlin Multiplatform appl
 ## Table of Contents
 
 - [Features](#features)
-- [Modules](#modules)
 - [Screenshots](#screenshots)
 - [How to Run](#how-to-run)
 - [Project setup](#project-setup)
 - [Contributing](#contributing)
 - [License](#license)
 
-## Feature
+## Features
 - **Kotlin Multiplatform**'s motto is *Don't Repeat Yourself*. Share the business logic code written in Kotlin between Android and iOS apps. 100% native UI and performance (shared code compiles into native libraries);
 - **Build from common code** – you can use only common code to create both Android and iOS apps;
 - **Kotlin Gradle DSL** – Configure project with flexible Kotlin Gradle DSL;
